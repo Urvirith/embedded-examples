@@ -1,2 +1,4 @@
+/embed-zig/zig-cache
+/embed-zig/zig-out
 /embed-rust/target
 /bin

@@ -98,8 +98,12 @@ hard_reset:
 	STM32_Programmer_CLI -c port=SWD -hardRst
 
 setup:
-	mkdir obj
-	mkdir bin
+	mkdir objc
+	mkdir objrust
+	mkdir objzig
+	mkdir binc
+	mkdir binrust
+	mkdir binzig
 
 # To Move The Rules
 #sudo cp ./rules/*.rules /etc/udev/rules.d/
