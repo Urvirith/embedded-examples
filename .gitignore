@@ -1,9 +1,9 @@
 /embed-zig/zig-cache
 /embed-zig/zig-out
 /embed-rust/target
-/binc
-/binrust
-/binzig
-/objc
-/objrust
-/objzig
+/embed-c/bin
+/embed-rust/bin
+/embed-zig/bin
+/embed-c/obj
+/embed-rust/obj
+/embed-zig/obj

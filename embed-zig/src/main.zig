@@ -1,4 +1,4 @@
-// EASE OF UNDERSTANDING EXAMPLE OF HOW TO READ AND WRITE FROM A CHIP SET THIS IS AN EXAMPLE OF AN STM32L432KC Nucleo Board
+// EASE OF UNDERSTANDING EXAMPLE OF HOW TO READ AND WRITE FROM A CHIP SET THIS IS AN EXAMPLE OF AN STM32L552ZE Nucleo Board
 
 const PORTC_PIN7:           u32 = 7;                                        // USER GREEN LED on GPIO A Bus, Pin 5 
 const LED_GRN:              u32 = PORTC_PIN7;                               // USER GREEN LED on GPIO A Bus, Pin 5
@@ -37,12 +37,12 @@ const RCC_AHB2ENR =         @intToPtr(*volatile u32, RCC_BASE + 0x4C);      // A
 // User required                                          
 const MASK_2_BIT:           u32 = 0x00000003;
 
-pub fn system_init() void {
+pub fn _system_init() void {
     // RCC SHOULD ALWAYS BE IN THE SYSTEM INIT TRYING TO OPERATE THE GPIO PINS EVEN ACTIVATING WILL CAUSE ISSUES AS THERE IS NO CLOCK TO RUN
     RCC_CR |= ((1<<PORTC_AHBEN) | (1<<PORTB_AHBEN) | (1<<PORTA_AHBEN));  // EN CLK FOR GPIO B and A
 }
 
-pub fn start() void {
+pub fn _start() void {
     // Initialize the LED on L432KC board 
     // Form a Pointer Via Register Address And Write Volitile To That Address
     // From Page 267 0x01 = General Output As The Output For The USER LED is at 3 it is x 2

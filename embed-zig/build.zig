@@ -14,8 +14,8 @@ pub fn build(b: *std.build.Builder) void {
     // between Debug, ReleaseSafe, ReleaseFast, and ReleaseSmall.
     const mode = b.standardReleaseOptions();
 
-    const lib = b.addStaticLibrary("embed-zig", "src/main.zig");
-    lib.setTarget(target);
-    lib.setBuildMode(mode);
-    lib.install();
+    const exe = b.addExecutable("STM32L552_Blink", "src/main.zig");
+    exe.setTarget(target);
+    exe.setBuildMode(mode);
+    exe.install();
 }
