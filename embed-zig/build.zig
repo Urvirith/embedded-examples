@@ -12,10 +12,9 @@ pub fn build(b: *std.build.Builder) void {
     
     // Standard release options allow the person running `zig build` to select
     // between Debug, ReleaseSafe, ReleaseFast, and ReleaseSmall.
-    const mode = b.standardReleaseOptions();
+    // const mode = b.standardReleaseOptions(.ReleaseSmall);
 
-    const exe = b.addExecutable("STM32L552_Blink", "src/main.zig");
-    exe.setTarget(target);
-    exe.setBuildMode(mode);
-    exe.install();
+    const obj = b.addObject("main", "src/main.zig");
+    obj.setTarget(target);
+    obj.setBuildMode(.ReleaseSmall);
 }

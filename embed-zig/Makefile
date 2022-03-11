@@ -62,7 +62,8 @@ $(BIN_DIR)/startup.o: $(START_DIR)/$(STARTUP)
 	$(AS) $< $(ASFLAGS) -o $@
 
 $(BIN_DIR)/main.o:
-	cargo build --release
+	zig build-obj $(SRC_DIR)/main.zig -O ReleaseSmall -target thumb-freestanding-none -mcpu cortex_m33
+	mv main.o ./bin
 
 
 clean:

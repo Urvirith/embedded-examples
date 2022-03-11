@@ -37,54 +37,58 @@ const RCC_AHB2ENR =         @intToPtr(*volatile u32, RCC_BASE + 0x4C);      // A
 // User required                                          
 const MASK_2_BIT:           u32 = 0x00000003;
 
-pub fn _system_init() void {
+export fn _system_init() void {
     // RCC SHOULD ALWAYS BE IN THE SYSTEM INIT TRYING TO OPERATE THE GPIO PINS EVEN ACTIVATING WILL CAUSE ISSUES AS THERE IS NO CLOCK TO RUN
-    RCC_CR |= ((1<<PORTC_AHBEN) | (1<<PORTB_AHBEN) | (1<<PORTA_AHBEN));  // EN CLK FOR GPIO B and A
+    RCC_CR.* |= ((1<<PORTC_AHBEN) | (1<<PORTB_AHBEN) | (1<<PORTA_AHBEN));  // EN CLK FOR GPIO B and A
 }
 
-pub fn _start() void {
+export fn _start() void {
     // Initialize the LED on L432KC board 
     // Form a Pointer Via Register Address And Write Volitile To That Address
     // From Page 267 0x01 = General Output As The Output For The USER LED is at 3 it is x 2
-    GPIOA_MODER |= (1<<(LED_RED * 2));
-    GPIOB_MODER |= (1<<(LED_BLU * 2));
-    GPIOC_MODER |= (1<<(LED_GRN * 2));
+    GPIOA_MODER.* |= (1<<(LED_RED * 2));
+    GPIOB_MODER.* |= (1<<(LED_BLU * 2));
+    GPIOC_MODER.* |= (1<<(LED_GRN * 2));
     // From Page 268 0x0 = Push Pull From Board Docs, LED is Push Pull so we ensure the bit is not set by inverting
     // In Practice this would set all others to open drain but since we are running only 1 output here we can get away with it
-    GPIOA_OTYPER &= !(1<<(LED_RED));
-    GPIOB_OTYPER &= !(1<<(LED_BLU));
-    GPIOC_OTYPER &= !(1<<(LED_GRN));
+    GPIOA_OTYPER.* &= ~@as(u32, (1<<LED_RED));
+    GPIOB_OTYPER.* &= ~@as(u32, (1<<LED_BLU));
+    GPIOC_OTYPER.* &= ~@as(u32, (1<<LED_GRN));
 
-    var i = 0;
+    var i :u32= 0;
 
     while(true) {
         while (i <= 1200000) {
             if (i == 300000) {
                 // From Page 270 0x1 turns on the output and offset + 16 will reset the output when set
-                GPIOC_BSRR |= (1 << LED_GRN);
+                GPIOC_BSRR.* |= (1 << LED_GRN);
             } else if (i == 0) {
                 // From Page 270 0x1 turns on the output and offset + 16 will reset the output when set
-                GPIOC_BSRR |= (1<<(LED_GRN + 16));
+                GPIOC_BSRR.* |= (1<<(LED_GRN + 16));
             }
 
             if (i == 600000) {
                 // From Page 270 0x1 turns on the output and offset + 16 will reset the output when set
-                GPIOB_BSRR |= (1<<LED_BLU);
+                GPIOB_BSRR.* |= (1<<LED_BLU);
             } else if (i == 0) {
                 // From Page 270 0x1 turns on the output and offset + 16 will reset the output when set
-                GPIOB_BSRR |= (1<<(LED_BLU + 16));
+                GPIOB_BSRR.* |= (1<<(LED_BLU + 16));
             }
 
             if (i == 900000) {
                 // From Page 270 0x1 turns on the output and offset + 16 will reset the output when set
-                GPIOA_BSRR |= (1<<LED_RED);
+                GPIOA_BSRR.* |= (1<<LED_RED);
             } else if (i == 0) {
                 // From Page 270 0x1 turns on the output and offset + 16 will reset the output when set
-                GPIOA_BSRR |= (1<<(LED_RED + 16));
+                GPIOA_BSRR.* |= (1<<(LED_RED + 16));
             }
 
             i += 1;
         }
         i = 0;
     }
+}
+
+export fn __aeabi_unwind_cpp_pr0() void {
+    while(true) {}
 }

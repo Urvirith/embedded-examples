@@ -1,5 +1,5 @@
-/embed-zig/zig-cache
-/embed-zig/zig-out
+/embed-zig/src/zig-cache
+/embed-zig/src/zig-out
 /embed-rust/target
 /embed-c/bin
 /embed-rust/bin
