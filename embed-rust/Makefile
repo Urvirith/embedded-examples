@@ -6,6 +6,7 @@ CC		    := $(TOOLCHAIN)gcc		# c compiler
 AS			:= $(TOOLCHAIN)as		# assembler
 LD 			:= $(TOOLCHAIN)ld 		# linker
 OBJ 		:= $(TOOLCHAIN)objcopy	# Object Copy
+READELF     := $(TOOLCHAIN)readelf  # Read Elf
 
 # -Os				Optimize for Size
 # -mcpu=cortex-m4	Compile for the ARM M4 Processor
@@ -70,9 +71,10 @@ clean:
 	rm -f $(BIN_DIR)/*.o
 	rm -f $(BIN_DIR)/*.elf
 	rm -f $(BIN_DIR)/*.bin
+	cargo clean
 
 flash:
-	STM32_Programmer_CLI -c port=SWD -w $(BLD_DIR)/main.bin 0x08000000
+	STM32_Programmer_CLI -c port=SWD -w $(BIN_DIR)/main.bin 0x08000000
 
 info:
 	STM32_Programmer_CLI -c port=SWD
@@ -86,6 +88,9 @@ hard_reset:
 setup:
 	mkdir obj
 	mkdir bin
+
+read:
+	$(READELF) $(BIN_DIR)/main.elf
 
 # To Move The Rules
 #sudo cp ./rules/*.rules /etc/udev/rules.d/

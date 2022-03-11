@@ -35,7 +35,7 @@
 #define PORTC_AHBEN         2                                               /* GPIOC Enable is located on AHB2 Board Bit 2 */
 
 /* Reset and Clock Control (RCC) */
-#define RCC_BASE            (uint32_t)0X40021000                            /* RCC base address */
+#define RCC_BASE            (uint32_t)0x40021000                            /* RCC base address */
 #define RCC_CR              *((volatile uint32_t *) (RCC_BASE + 0x00))      /* Clock Control Register */
 #define RCC_AHB2ENR         *((volatile uint32_t *) (RCC_BASE + 0x4C))      /* AHB2 Enable Register */
 
