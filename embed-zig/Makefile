@@ -25,6 +25,7 @@ START_DIR := ../startup
 LINK_DIR  := ../linker
 OBJ_DIR	  := ./obj
 BIN_DIR	  := ./bin
+BLD_DIR	  := ./build
 
 #ONLY ONE
 STARTUP		:= startup_ARMCM33.s
@@ -72,6 +73,11 @@ clean:
 	rm -f $(BIN_DIR)/*.o
 	rm -f $(BIN_DIR)/*.elf
 	rm -f $(BIN_DIR)/*.bin
+	rm -f $(BLD_DIR)/*.o
+	rm -f $(BLD_DIR)/*.elf
+	rm -f $(BLD_DIR)/*.bin
+	rm -r ./zig-cache
+	rm -r $(SRC_DIR)/zig-cache
 
 flash:
 	STM32_Programmer_CLI -c port=SWD -w $(BIN_DIR)/main.bin 0x08000000

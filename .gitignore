@@ -1,5 +1,7 @@
 /embed-zig/src/zig-cache
 /embed-zig/src/zig-out
+/embed-zig/zig-cache
+/embed-zig/zig-out
 /embed-rust/target
 /embed-c/bin
 /embed-rust/bin
@@ -7,3 +9,4 @@
 /embed-c/obj
 /embed-rust/obj
 /embed-zig/obj
+/embed-zig/build

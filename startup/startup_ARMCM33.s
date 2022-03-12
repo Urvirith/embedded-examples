@@ -287,109 +287,109 @@ Default_Handler:
                 Set_Default_Handler  PendSV_Handler
                 Set_Default_Handler  SysTick_Handler
 
-                Set_Default_Handler  WWDG_IRQHandler                    /*   0  Window Watchdog */
-                Set_Default_Handler  PDV_PVM_IRQHandler                 /*   1  PVD/PVM1/PVM2/PVM3/PVM4 through EXTI lines 16/35/36/37/38 interrupts */
-                Set_Default_Handler  RTC_IRQHandler                     /*   2  RTC secure global interrupts (EXTI line 18) */
-                Set_Default_Handler  RTC_S_IRQHandler                   /*   3  RTC secure global interrupts (EXTI line 18) */
-                Set_Default_Handler  TAMP_IRQHandler                    /*   4  Tamper global interrupt (EXTI line 19) */
-                Set_Default_Handler  TAMP_S_IRQHandler                  /*   5  Tamper secure global interrupt (EXTI line 20) */
-                Set_Default_Handler  FLASH_IRQHandler                   /*   6  Flash memory global interrupt */
-                Set_Default_Handler  FLASH_S_IRQHandler                 /*   7  Flash memory secure global interrupt */
-                Set_Default_Handler  GTZC_IRQHandler                    /*   8  TZIC secure global interrupt */
-                Set_Default_Handler  RCC_IRQHandler                     /*   9  RCC global interrupt */
-                Set_Default_Handler  RCC_S_IRQHandler                   /*  10  RCC secure global interrupt */
-                Set_Default_Handler  EXTI0_IRQHandler                   /*  11  EXTI Line0 interrupt */ 
-                Set_Default_Handler  EXTI1_IRQHandler                   /*  12  EXTI Line1 interrupt */
-                Set_Default_Handler  EXTI2_IRQHandler                   /*  13  EXTI Line2 interrupt */
-                Set_Default_Handler  EXTI3_IRQHandler                   /*  14  EXTI Line3 interrupt */
-                Set_Default_Handler  EXTI4_IRQHandler                   /*  15  EXTI Line4 interrupt */
-                Set_Default_Handler  EXTI5_IRQHandler                   /*  16  EXTI Line5 interrupt */
-                Set_Default_Handler  EXTI6_IRQHandler                   /*  17  EXTI Line6 interrupt */
-                Set_Default_Handler  EXTI7_IRQHandler                   /*  18  EXTI Line7 interrupt */
-                Set_Default_Handler  EXTI8_IRQHandler                   /*  19  EXTI Line8 interrupt */
-                Set_Default_Handler  EXTI9_IRQHandler                   /*  20  EXTI Line9 interrupt */
-                Set_Default_Handler  EXTI10_IRQHandler                  /*  21  EXTI Line10 interrupt */
-                Set_Default_Handler  EXTI11_IRQHandler                  /*  22  EXTI Line11 interrupt */
-                Set_Default_Handler  EXTI12_IRQHandler                  /*  23  EXTI Line12 interrupt */
-                Set_Default_Handler  EXTI13_IRQHandler                  /*  24  EXTI Line13 interrupt */
-                Set_Default_Handler  EXTI14_IRQHandler                  /*  25  EXTI Line14 interrupt */
-                Set_Default_Handler  EXTI15_IRQHandler                  /*  26  EXTI Line15 interrupt */
-                Set_Default_Handler  DMAMUX1_IRQHandler                 /*  27  DMAMUX1 non-secure interrupt */
-                Set_Default_Handler  DMAMUX1_S_IRQHandler               /*  28  DMAMUX1 secure interrupt */
-                Set_Default_Handler  DMA1_Channel1_IRQHandler           /*  29  DMA1 Channel 1 interrupt */
-                Set_Default_Handler  DMA1_Channel2_IRQHandler           /*  30  DMA1 Channel 2 interrupt */
-                Set_Default_Handler  DMA1_Channel3_IRQHandler           /*  31  DMA1 Channel 3 interrupt */
-                Set_Default_Handler  DMA1_Channel4_IRQHandler           /*  32  DMA1 Channel 4 interrupt */
-                Set_Default_Handler  DMA1_Channel5_IRQHandler           /*  33  DMA1 Channel 5 interrupt */
-                Set_Default_Handler  DMA1_Channel6_IRQHandler           /*  34  DMA1 Channel 6 interrupt */
-                Set_Default_Handler  DMA1_Channel7_IRQHandler           /*  35  DMA1 Channel 7 interrupt */
-                Set_Default_Handler  DMA1_Channel8_IRQHandler           /*  36  DMA1 Channel 8 interrupt */
-                Set_Default_Handler  ADC1_2_IRQHandler                  /*  37  ADC1 & ADC2 interrupt */
-                Set_Default_Handler  DAC_IRQHandler                     /*  38  DAC1&2 underrun errors interrupt */
-                Set_Default_Handler  FDCAN1_IT0_IRQHandler              /*  39  FDCAN1 Interrupt 0 interrupt */
-                Set_Default_Handler  FDCAN1_IT1_IRQHandler              /*  40  FDCAN1 Interrupt 1 interrupt */
-                Set_Default_Handler  TIM1_BRK_IRQHandler                /*  41  TIM1 Break interrupt */
-                Set_Default_Handler  TIM1_UP_IRQHandler                 /*  42  TIM1 Update interrupt */
-                Set_Default_Handler  TIM1_TRG_COM_IRQHandler            /*  43  TIM1 Trigger and Commutation interrupt */
-                Set_Default_Handler  TIM1_CC_IRQHandler                 /*  44  TIM1 Capture Compare interrupt */
-                Set_Default_Handler  TIM2_IRQHandler                    /*  45  TIM2 interrupt */
-                Set_Default_Handler  TIM3_IRQHandler                    /*  46  TIM3 interrupt */
-                Set_Default_Handler  TIM4_IRQHandler                    /*  47  TIM4 interrupt */
-                Set_Default_Handler  TIM5_IRQHandler                    /*  48  TIM5 interrupt */
-                Set_Default_Handler  TIM6_IRQHandler                    /*  49  TIM6 interrupt */
-                Set_Default_Handler  TIM7_IRQHandler                    /*  50  TIM7 interrupt */
-                Set_Default_Handler  TIM8_BRK_IRQHandler                /*  51  TIM8 Break interrupt */
-                Set_Default_Handler  TIM8_UP_IRQHandler                 /*  52  TIM8 Update interrupt */
-                Set_Default_Handler  TIM8_TRG_COM_IRQHandler            /*  53  TIM8 Trigger and Commutation interrupt */
-                Set_Default_Handler  TIM8_CC_IRQHandler                 /*  54  TIM8 Capture Compare interrupt */
-                Set_Default_Handler  I2C1_EV_IRQHandler                 /*  55  I2C1 Event interrupt */
-                Set_Default_Handler  I2C1_ER_IRQHandler                 /*  56  I2C1 Error interrupt */
-                Set_Default_Handler  I2C2_EV_IRQHandler                 /*  57  I2C2 Event interrupt */
-                Set_Default_Handler  I2C2_ER_IRQHandler                 /*  58  I2C2 Error interrupt */
-                Set_Default_Handler  SPI1_IRQHandler                    /*  59  SPI1 interrupt */
-                Set_Default_Handler  SPI2_IRQHandler                    /*  60  SPI2 interrupt */
-                Set_Default_Handler  USART1_IRQHandler                  /*  61  USART1 interrupt */
-                Set_Default_Handler  USART2_IRQHandler                  /*  62  USART2 interrupt */
-                Set_Default_Handler  USART3_IRQHandler                  /*  63  USART3 interrupt */
-                Set_Default_Handler  UART4_IRQHandler                   /*  64  UART4 interrupt */
-                Set_Default_Handler  UART5_IRQHandler                   /*  65  UART5 interrupt */
-                Set_Default_Handler  LPUART1_IRQHandler                 /*  66  LP UART1 interrupt */
-                Set_Default_Handler  LPTIM1_IRQHandler                  /*  67  LP TIM1 interrupt */
-                Set_Default_Handler  LPTIM2_IRQHandler                  /*  68  LP TIM2 interrupt */
-                Set_Default_Handler  TIM15_IRQHandler                   /*  69  TIM15 interrupt */
-                Set_Default_Handler  TIM16_IRQHandler                   /*  70  TIM16 interrupt */
-                Set_Default_Handler  TIM17_IRQHandler                   /*  71  TIM17 interrupt */
-                Set_Default_Handler  COMP_IRQHandler                    /*  72  COMP1&2 interrupt */
-                Set_Default_Handler  USB_FS_IRQHandler                  /*  73  USB FS interrupt */
-                Set_Default_Handler  CRS_IRQHandler                     /*  74  CRS interrupt */
-                Set_Default_Handler  FMC_IRQHandler                     /*  75  FMC interrupt */
-                Set_Default_Handler  OCTOSPI1_IRQHandler                /*  76  OctoSPI1 global interrupt */
-                Set_Default_Handler  SDMMC1_IRQHandler                  /*  78  SDMMC1 interrupt */
-                Set_Default_Handler  DMA2_Channel1_IRQHandler           /*  80  DMA2 Channel 1 interrupt */
-                Set_Default_Handler  DMA2_Channel2_IRQHandler           /*  81  DMA2 Channel 2 interrupt */
-                Set_Default_Handler  DMA2_Channel3_IRQHandler           /*  82  DMA2 Channel 3 interrupt */
-                Set_Default_Handler  DMA2_Channel4_IRQHandler           /*  83  DMA2 Channel 4 interrupt */
-                Set_Default_Handler  DMA2_Channel5_IRQHandler           /*  84  DMA2 Channel 5 interrupt */
-                Set_Default_Handler  DMA2_Channel6_IRQHandler           /*  85  DMA2 Channel 6 interrupt */
-                Set_Default_Handler  DMA2_Channel7_IRQHandler           /*  86  DMA2 Channel 7 interrupt */
-                Set_Default_Handler  DMA2_Channel8_IRQHandler           /*  87  DMA2 Channel 8 interrupt */
-                Set_Default_Handler  I2C3_EV_IRQHandler                 /*  88  I2C3 event interrupt */
-                Set_Default_Handler  I2C3_ER_IRQHandler                 /*  89  I2C3 error interrupt */
-                Set_Default_Handler  SAI1_IRQHandler                    /*  90  Serial Audio Interface 1 global interrupt */
-                Set_Default_Handler  SAI2_IRQHandler                    /*  91  Serial Audio Interface 2 global interrupt */
-                Set_Default_Handler  TSC_IRQHandler                     /*  92  Touch Sense Controller global interrupt */
-                Set_Default_Handler  RNG_IRQHandler                     /*  94  RNG global interrupt */
-                Set_Default_Handler  FPU_IRQHandler                     /*  95  FPU interrupt */
-                Set_Default_Handler  HASH_IRQHandler                    /*  96  HASH interrupt */
-                Set_Default_Handler  LPTIM3_IRQHandler                  /*  98  LP TIM3 interrupt */
-                Set_Default_Handler  SPI3_IRQHandler                    /*  99  SPI3 interrupt */
-                Set_Default_Handler  I2C4_ER_IRQHandler                 /*  100 I2C4 error interrupt */
-                Set_Default_Handler  I2C4_EV_IRQHandler                 /*  101 I2C4 event interrupt */
-                Set_Default_Handler  DFSDM1_FLT0_IRQHandler             /*  102 DFSDM1 Filter 0 global interrupt */
-                Set_Default_Handler  DFSDM1_FLT1_IRQHandler             /*  103 DFSDM1 Filter 1 global interrupt */
-                Set_Default_Handler  DFSDM1_FLT2_IRQHandler             /*  104 DFSDM1 Filter 2 global interrupt */
-                Set_Default_Handler  DFSDM1_FLT3_IRQHandler             /*  105 DFSDM1 Filter 3 global interrupt */
-                Set_Default_Handler  UCPD1_IRQHandler                   /*  106 UCPD1 interrupt */
-                Set_Default_Handler  ICACHE_IRQHandler                  /*  107 ICACHE interrupt */
+                Set_Default_Handler  WWDG_IRQHandler
+                Set_Default_Handler  PDV_PVM_IRQHandler
+                Set_Default_Handler  RTC_IRQHandler
+                Set_Default_Handler  RTC_S_IRQHandler
+                Set_Default_Handler  TAMP_IRQHandler
+                Set_Default_Handler  TAMP_S_IRQHandler
+                Set_Default_Handler  FLASH_IRQHandler
+                Set_Default_Handler  FLASH_S_IRQHandler
+                Set_Default_Handler  GTZC_IRQHandler
+                Set_Default_Handler  RCC_IRQHandler
+                Set_Default_Handler  RCC_S_IRQHandler
+                Set_Default_Handler  EXTI0_IRQHandler
+                Set_Default_Handler  EXTI1_IRQHandler
+                Set_Default_Handler  EXTI2_IRQHandler
+                Set_Default_Handler  EXTI3_IRQHandler
+                Set_Default_Handler  EXTI4_IRQHandler
+                Set_Default_Handler  EXTI5_IRQHandler
+                Set_Default_Handler  EXTI6_IRQHandler
+                Set_Default_Handler  EXTI7_IRQHandler
+                Set_Default_Handler  EXTI8_IRQHandler
+                Set_Default_Handler  EXTI9_IRQHandler
+                Set_Default_Handler  EXTI10_IRQHandler
+                Set_Default_Handler  EXTI11_IRQHandler
+                Set_Default_Handler  EXTI12_IRQHandler
+                Set_Default_Handler  EXTI13_IRQHandler
+                Set_Default_Handler  EXTI14_IRQHandler
+                Set_Default_Handler  EXTI15_IRQHandler
+                Set_Default_Handler  DMAMUX1_IRQHandler
+                Set_Default_Handler  DMAMUX1_S_IRQHandler
+                Set_Default_Handler  DMA1_Channel1_IRQHandler
+                Set_Default_Handler  DMA1_Channel2_IRQHandler
+                Set_Default_Handler  DMA1_Channel3_IRQHandler
+                Set_Default_Handler  DMA1_Channel4_IRQHandler
+                Set_Default_Handler  DMA1_Channel5_IRQHandler
+                Set_Default_Handler  DMA1_Channel6_IRQHandler
+                Set_Default_Handler  DMA1_Channel7_IRQHandler
+                Set_Default_Handler  DMA1_Channel8_IRQHandler
+                Set_Default_Handler  ADC1_2_IRQHandler
+                Set_Default_Handler  DAC_IRQHandler
+                Set_Default_Handler  FDCAN1_IT0_IRQHandler
+                Set_Default_Handler  FDCAN1_IT1_IRQHandler
+                Set_Default_Handler  TIM1_BRK_IRQHandler
+                Set_Default_Handler  TIM1_UP_IRQHandler
+                Set_Default_Handler  TIM1_TRG_COM_IRQHandler
+                Set_Default_Handler  TIM1_CC_IRQHandler
+                Set_Default_Handler  TIM2_IRQHandler
+                Set_Default_Handler  TIM3_IRQHandler
+                Set_Default_Handler  TIM4_IRQHandler
+                Set_Default_Handler  TIM5_IRQHandler
+                Set_Default_Handler  TIM6_IRQHandler
+                Set_Default_Handler  TIM7_IRQHandler
+                Set_Default_Handler  TIM8_BRK_IRQHandler
+                Set_Default_Handler  TIM8_UP_IRQHandler
+                Set_Default_Handler  TIM8_TRG_COM_IRQHandler
+                Set_Default_Handler  TIM8_CC_IRQHandler
+                Set_Default_Handler  I2C1_EV_IRQHandler
+                Set_Default_Handler  I2C1_ER_IRQHandler
+                Set_Default_Handler  I2C2_EV_IRQHandler
+                Set_Default_Handler  I2C2_ER_IRQHandler
+                Set_Default_Handler  SPI1_IRQHandler
+                Set_Default_Handler  SPI2_IRQHandler
+                Set_Default_Handler  USART1_IRQHandler
+                Set_Default_Handler  USART2_IRQHandler
+                Set_Default_Handler  USART3_IRQHandler
+                Set_Default_Handler  UART4_IRQHandler
+                Set_Default_Handler  UART5_IRQHandler
+                Set_Default_Handler  LPUART1_IRQHandler
+                Set_Default_Handler  LPTIM1_IRQHandler
+                Set_Default_Handler  LPTIM2_IRQHandler
+                Set_Default_Handler  TIM15_IRQHandler
+                Set_Default_Handler  TIM16_IRQHandler
+                Set_Default_Handler  TIM17_IRQHandler
+                Set_Default_Handler  COMP_IRQHandler
+                Set_Default_Handler  USB_FS_IRQHandler
+                Set_Default_Handler  CRS_IRQHandler
+                Set_Default_Handler  FMC_IRQHandler
+                Set_Default_Handler  OCTOSPI1_IRQHandler
+                Set_Default_Handler  SDMMC1_IRQHandler
+                Set_Default_Handler  DMA2_Channel1_IRQHandler
+                Set_Default_Handler  DMA2_Channel2_IRQHandler
+                Set_Default_Handler  DMA2_Channel3_IRQHandler
+                Set_Default_Handler  DMA2_Channel4_IRQHandler
+                Set_Default_Handler  DMA2_Channel5_IRQHandler
+                Set_Default_Handler  DMA2_Channel6_IRQHandler
+                Set_Default_Handler  DMA2_Channel7_IRQHandler
+                Set_Default_Handler  DMA2_Channel8_IRQHandler
+                Set_Default_Handler  I2C3_EV_IRQHandler
+                Set_Default_Handler  I2C3_ER_IRQHandler
+                Set_Default_Handler  SAI1_IRQHandler
+                Set_Default_Handler  SAI2_IRQHandler
+                Set_Default_Handler  TSC_IRQHandler
+                Set_Default_Handler  RNG_IRQHandler
+                Set_Default_Handler  FPU_IRQHandler
+                Set_Default_Handler  HASH_IRQHandler
+                Set_Default_Handler  LPTIM3_IRQHandler
+                Set_Default_Handler  SPI3_IRQHandler
+                Set_Default_Handler  I2C4_ER_IRQHandler
+                Set_Default_Handler  I2C4_EV_IRQHandler
+                Set_Default_Handler  DFSDM1_FLT0_IRQHandler
+                Set_Default_Handler  DFSDM1_FLT1_IRQHandler
+                Set_Default_Handler  DFSDM1_FLT2_IRQHandler
+                Set_Default_Handler  DFSDM1_FLT3_IRQHandler
+                Set_Default_Handler  UCPD1_IRQHandler
+                Set_Default_Handler  ICACHE_IRQHandler
 
                 .end
