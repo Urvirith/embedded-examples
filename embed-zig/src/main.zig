@@ -48,12 +48,12 @@ export fn _start() void {
     // Initialize the LED on L432KC board 
     // Form a Pointer Via Register Address And Write Volitile To That Address
     // From Page 267 0x01 = General Output As The Output For The USER LED is at 3 it is x 2
-    GPIOA_MODER.* |= (1<<(LED_RED * 2));
     GPIOA_MODER.* &= ~@as(u32, (MASK_2_BIT<<(LED_RED * 2)));
-    GPIOB_MODER.* |= (1<<(LED_BLU * 2));
+    GPIOA_MODER.* |= (1<<(LED_RED * 2));
     GPIOB_MODER.* &= ~@as(u32, (MASK_2_BIT<<(LED_BLU * 2)));
-    GPIOC_MODER.* |= (1<<(LED_GRN * 2));
+    GPIOB_MODER.* |= (1<<(LED_BLU * 2));
     GPIOC_MODER.* &= ~@as(u32, (MASK_2_BIT<<(LED_GRN * 2)));
+    GPIOC_MODER.* |= (1<<(LED_GRN * 2));
     // From Page 268 0x0 = Push Pull From Board Docs, LED is Push Pull so we ensure the bit is not set by inverting
     // In Practice this would set all others to open drain but since we are running only 1 output here we can get away with it
     GPIOA_OTYPER.* &= ~@as(u32, (1<<LED_RED));
@@ -61,9 +61,8 @@ export fn _start() void {
     GPIOC_OTYPER.* &= ~@as(u32, (1<<LED_GRN));
 
     var i :u32= 0;
-
     while(true) {
-        while (i <= 1200000) {
+        while (i <= 1200000) : (i += 1) {
             if (i == 300000) {
                 // From Page 270 0x1 turns on the output and offset + 16 will reset the output when set
                 GPIOC_BSRR.* |= (1 << LED_GRN);
@@ -87,8 +86,6 @@ export fn _start() void {
                 // From Page 270 0x1 turns on the output and offset + 16 will reset the output when set
                 GPIOA_BSRR.* |= (1<<(LED_RED + 16));
             }
-
-            i += 1;
         }
         i = 0;
     }
